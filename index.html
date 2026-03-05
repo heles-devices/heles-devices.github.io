@@ -1,10 +1,319 @@
-<!DOCTYPE html>
-<html>
 <head>
-    <title>Heles Devices</title>
+    <link rel="stylesheet" href="static/styles/style.css">
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
 </head>
-<body>
-    <h1>Heles Devices - Under Construction</h1>
-    <p>Welcome to my professional profile.</p>
+<body class="theme_1">
+    <!-- Hidden resource -->
+    <div class="resources">
+        <img src="static/images/projects/sudoku 1.jpg" alt="sudoku 1" data-ind="1" data-stat="d0_a1">
+        <img src="static/images/projects/sudoku 2.jpg" alt="sudoku 2" data-ind="2" data-stat="d0_a1">
+        <img src="static/images/projects/blinds 1.jpg" alt="blinds 1" data-ind="3" data-stat="d0_a1">
+        <img src="static/images/projects/blinds 2.jpg" alt="blinds 2" data-ind="4" data-stat="d0_a1">
+        <img src="static/images/projects/robot 1.jpg" alt="robot 1" data-ind="5" data-stat="d0_a1">
+        <img src="static/images/projects/robot 2.jpg" alt="robot 2" data-ind="6" data-stat="d0_a1">
+        <img src="static/images/projects/propelling 1.jpg" alt="propeller 1" data-ind="7" data-stat="d0_a1">
+        <img src="static/images/projects/propelling 2.jpg" alt="propeller 2" data-ind="8" data-stat="d0_a1">
+        <img src="static/images/projects/car jack 1.jpg" alt="car jack 1" data-ind="9" data-stat="d0_a1">
+        <img src="static/images/projects/car jack 2.jpg" alt="car jack 2" data-ind="10" data-stat="d0_a1">
+        <img src="static/images/projects/soda 1.jpg" alt="soda maker 1" data-ind="11" data-stat="d0_a1">
+        <img src="static/images/projects/soda 2.jpg" alt="soda maker 2" data-ind="12" data-stat="d0_a1">
+        <img src="static/images/projects/programmer 1.jpg" alt="programmer 1" data-ind="13" data-stat="d0_a1">
+        <img src="static/images/projects/programmer 2.jpg" alt="programmer 2" data-ind="14" data-stat="d0_a1">
+        <img src="static/images/projects/programmer 3.jpg" alt="programmer 3" data-ind="15" data-stat="d0_a1">
+        <img src="static/images/projects/patent_hidden.jpg" alt="patent" data-ind="16" data-stat="d0_a1">
+        <svg style="position: absolute; width: 0; height: 0; pointer-events: none; overflow: hidden;" aria-hidden="true">
+            <defs>
+                <filter id="noiseFilter">
+                    <feTurbulence type="turbulence" baseFrequency=".055" numOctaves="1" result="noise" />
+                    <feColorMatrix in="noise" values="1 0 0 0 1 0.85 0 0 0 0.1 0 0 0 0 0 0 0 0 0 1" />
+                </filter>
+                <pattern id="noisePattern" patternUnits="userSpaceOnUse" width="600" height="600">
+                    <rect width="600" height="600" filter="url(#noiseFilter)" class="moving-noise" />
+                </pattern>
+                <mask id="ringMask">
+                    <path d="M256 36a220 220 0 1 1-.1 0Zm0 20a200 200 0 1 0 .1 0Z" fill="#fff" fill-rule="evenodd"/>
+                </mask>
+            </defs>
+        </svg>
+    </div>     
+
+
+    <!-- Background Container -->
+    <div id="header" class="th_color_1">
+        <canvas id="cv_intro_head"></canvas><!--  class="seen" -->
+        <div id="h_pict" class="seen">
+            <img src="static/images/mypict_256.png" alt="Profile" width="100" height="100">
+        </div>
+        <div id="little_stars" class="unseen star_anim">
+            <div id="l_star_0" class="th_color_1">
+                <img src="static/images/stars/city.svg" alt="home">
+                <div id="text_ls_0"></div>
+            </div>
+            <div id="l_star_1">
+                <img src="static/images/stars/climb.svg" alt="my-way">
+                <div id="text_ls_1"></div>
+            </div>
+            <div id="l_star_2">
+                <img src="static/images/stars/experiences.svg" alt="experience">
+                <div id="text_ls_2"></div>
+            </div>
+            <div id="l_star_3">
+                <img src="static/images/stars/profile.svg" alt="profile">
+                <div id="text_ls_3"></div>
+            </div>
+            <div id="l_star_4">
+                <img src="static/images/stars/academics.svg" alt="academics">
+                <div id="text_ls_4"></div>
+            </div>
+            <div id="l_star_5">
+                <img src="static/images/stars/compass.svg" alt="projects">
+                <div id="text_ls_5"></div>
+            </div>
+            <div id="l_star_6">
+                <img src="static/images/stars/thoughts.svg" alt="thoughts">
+                <div id="text_ls_6"></div>
+            </div>
+        </div>
+        <div id="logged_in_as" class="unseen"><span id="logas_txt">Welcome,<br>dear visitor</span></div>
+        <div id="title-msg" class="seen">
+            <H1 id="title"></H1>
+        </div>
+        <div id="settings" class="seen theme_1">
+            <div id="flag" class="flag">
+                <div id="ro_lang" data-lang="ro">
+                    <img width="16" height="10" src="static/images/flags/ro_flag.svg" alt="romanian flag">&nbsp;Română</div>
+                <div id="en_lang" data-lang="en">
+                    <img width="16" height="10" src="static/images/flags/uk_flag.svg" alt="english flag">&nbsp;English</div>
+                <div id="it_lang" data-lang="it">
+                    <img width="16" height="10" src="static/images/flags/it_flag.svg" alt="italian flag">&nbsp;Italiano</div>
+                <div id="fr_lang" data-lang="fr">
+                    <img width="16" height="10" src="static/images/flags/fr_flag.svg" alt="french flag">&nbsp;Française</div>
+            </div>            
+            <div id="theme">
+                <div id="theme_1"><img width="10" height="10" src="static/images/themes/dark_theme.svg" alt="dark theme">
+                    &nbsp;<span id="theme_1_txt">Darker</span></div>
+                <div id="theme_2"><img width="10" height="10" src="static/images/themes/light_theme.svg" alt="light theme">
+                    &nbsp;<span id="theme_2_txt">Lighter</span></div>
+                <div id="theme_3"><img width="10" height="10" src="static/images/themes/olive_theme.svg" alt="olive theme">
+                    &nbsp;<span id="theme_3_txt">Olive</span></div>
+                <div id="theme_4"><img width="10" height="10" src="static/images/themes/blue_theme.svg" alt="blue theme">
+                    &nbsp;<span id="theme_4_txt">Blue</span></div>
+                <div id="theme_5"><img width="10" height="10" src="static/images/themes/purple_theme.svg" alt="purple theme">
+                    &nbsp;<span id="theme_5_txt">Purple</span></div>
+            </div>
+            <div id="login" class="login">
+                <div id="log_el">
+                    <img width="10" height="10" src="static/images/enter.svg" alt="login image">
+                    <img width="10" height="10" src="static/images/exit.svg" alt="logout image">
+                    &nbsp;<span id="login_txt">Login</span></div>
+            </div>
+            <div id="log_stat" class="login"></div>
+        </div>
+    </div>
+    <div id = "scroll_mess" class = "seen">
+        <div id="scroll_text" class="sm_content">
+        </div>
+    </div>
+
+    <div id="loading-overlay" class="seen">
+        <svg class="spinner-svg" fill="white" width="48" height="48" viewBox="0 0 24 24" xmlns="http://www.w3.org">
+            <g>
+                <circle cx="12" cy="2.5" r="1.5" opacity=".14"/>
+                <circle cx="16.75" cy="3.77" r="1.5" opacity=".29"/>
+                <circle cx="20.23" cy="7.25" r="1.5" opacity=".43"/>
+                <circle cx="21.50" cy="12.00" r="1.5" opacity=".57"/>
+                <circle cx="20.23" cy="16.75" r="1.5" opacity=".71"/>
+                <circle cx="16.75" cy="20.23" r="1.5" opacity=".86"/>
+                <circle cx="12" cy="21.5" r="1.5"/>
+            </g>
+        </svg>
+        <H3>Loading. Please wait.</H3>
+    </div>
+    <div id="image-overlay">
+        <div id="img-box">
+            <div id="image-err">
+                <h3 id="im-err-text" class="unseen"></h3>
+            </div>
+            <div id="close-img-but"><img src="static/images/close_wnd.svg" alt=""></div>
+            <div id="down-img-but"><img src="static/images/down_wnd.svg" alt=""></div>
+            <a id="img-box-a" href="" title="" download="" target="_blank"></a>
+        </div>
+    </div>
+    <div id = "page_title" class = "unseen svg_filter">
+        <h1 id="page_title_txt" data-label=""></h1>
+    </div>    
+    <div id="contents">
+        <div id="content_0" class="seen">
+            <canvas id="skyCanvas"></canvas>
+            <div id="drag_shuttle" class="seen"></div>
+            <canvas id="cv_intro_body1"></canvas>
+            <canvas id="cv_intro_body2"></canvas>
+            <div id="intro_stars" class="seen star_anim">
+                <div id="star_1">
+                    <img src="static/images/stars/climb.svg" alt="my-way">
+                    <div id="text_s_1"></div>
+                </div>
+                <div id="star_2">
+                    <img src="static/images/stars/experiences.svg" alt="experiences">
+                    <div id="text_s_2"></div>
+                </div>
+                <div id="star_3">
+                    <img src="static/images/stars/profile.svg" alt="profile">
+                    <div id="text_s_3"></div>
+                </div>
+                <div id="star_4">
+                    <img src="static/images/stars/academics.svg" alt="academics">
+                    <div id="text_s_4"></div>
+                </div>
+                <div id="star_5">
+                    <img src="static/images/stars/compass.svg" alt="projects">
+                    <div id="text_s_5"></div>
+                </div>
+                <div id="star_6">
+                    <img src="static/images/stars/thoughts.svg" alt="thoughts">
+                    <div id="text_s_6"></div>
+                </div>
+            </div>
+
+        </div>
+        <div id="content_1" class="unseen svg_filter"><!--My-way page-->
+            <div><!--Childhood section-->
+                <h2><img src="static/images/content_1/kite.svg" alt="kite"><span id="childhood_txt"></span></h2>
+                <span id="c1_sect1"></span>
+                <!--data-stat: d1/d0 download OK/Not, a1/a0 accessible OK/Not -->
+                <img src="static/images/content_1/my city.jpg" alt="my city" id="c1_im1" 
+                    class="r_float" data-stat="d1_a1">
+                <span id="c1_sect2"></span>
+                <img src="static/images/content_1/tricycle.jpg" alt="cocheta" id="c1_im2" 
+                    class="l_float" data-stat="d0_a1">
+                <span id="c1_sect3" class="no_float"></span>
+                <img src="static/images/content_1/galena.jpg" alt="galena" id="c1_im3" 
+                    class="r_float no_float" data-stat="d0_a1">
+                <span id="c1_sect4"></span>
+                <div id="quiz_c1_1">
+                    <img src="static/images/content_1/quiz.svg" alt="quiz">
+                    <span id="c1_qq1"></span><br><span id="c1_qa1"></span>
+                </div>
+                <div id="quiz_c1_2">
+                    <img src="static/images/content_1/quiz.svg" alt="quiz">
+                    <span id="c1_qq2"></span><br><span id="c1_qa2"></span>
+                </div>
+                <span id="c1_sect5"></span>
+                <div id="quiz_c1_3">
+                    <img src="static/images/content_1/quiz.svg" alt="quiz">
+                    <span id="c1_qq3"></span><br><span id="c1_qa3"></span>
+                </div>
+                <span id="c1_sect6"></span>
+            </div>
+            <div><!--Adolescence section-->
+                <h2><img src="static/images/content_1/study_boy.svg" alt="Adolescence"><span id="adolescence_txt"></span></h2>
+                <span id="c1_sect7"></span>
+                <img src="static/images/content_1/market.jpg" alt="market"  id="c1_im4" 
+                    class="r_float" data-stat="d1_a1">
+                <span id="c1_sect8"></span>
+                <div id="quiz_c1_4">
+                    <img src="static/images/content_1/quiz.svg" alt="quiz">
+                    <span id="c1_qq4"></span><br><span id="c1_qa4"></span>
+                </div>
+                <span id="c1_sect9"></span>
+                <div id="quiz_c1_5">
+                    <img src="static/images/content_1/quiz.svg" alt="quiz">
+                    <span id="c1_qq5"></span><br><span id="c1_qa5"></span>
+                </div>
+                <span id="c1_sect10"></span>
+            </div>
+            <div><!--Maturity section-->
+                <h2><img src="static/images/content_1/senior.svg" alt="maturity"><span id="maturity_txt"></span></h2>
+                <span id="c1_sect11"></span>
+                <div id="quiz_c1_6">
+                    <img src="static/images/content_1/quiz.svg" alt="quiz" class="l_float">
+                    <span id="c1_qq6"></span><br><span id="c1_qa6"></span>
+                </div>
+                <span></span>
+            </div>
+            <div><!--Career section-->
+                <h2><img src="static/images/content_1/work.svg" alt="career"><span id="career_txt"></span></h2>
+                <span id="c1_sect13"></span>
+            </div>
+            <div><!--Next steps section-->
+                <h2><img src="static/images/content_1/next.svg" alt="next"><span id="next_txt"></span></h2>
+                <img src="static/images/content_1/next.jpg" alt="next experience" id="c1_im5" 
+                    class="r_float" data-stat="d1_a0">
+                    <span id="c1_sect14"></span>
+            </div>
+        </div>
+        <div id="content_2" class="unseen svg_filter"><!--Experiences page-->
+            <div id="c2_div1"><!--Electronics R&D skills-->
+                <h2><img src="static/images/content_2/electricity.svg" alt="electronics R&D"><span id="c2_h1"></span></h2>
+                <!--Add here the skills as comment-->
+            </div>
+            <div id="c2_div2"><!--Telecommunications related skills-->
+                <h2><img src="static/images/content_2/phone.svg" alt="phone"><span id="c2_h2"></span></h2>
+            <!--Add here the skills as comment-->
+            </div>
+            <div id="c2_div3"><!--Leadership skills-->
+                <h2><img src="static/images/content_2/manager.svg" alt="leadership"><span id="c2_h3"></span></h2>
+            <!--Add here the skills as comment-->
+            </div>
+            <div id="c2_div4"><!--Application related skills-->
+                <h2><img src="static/images/content_2/computer.svg" alt="application"><span id="c2_h4"></span></h2>
+            <!--Add here the skills as comment-->
+            </div>
+            <div id="c2_div5"><!--Self developed skills-->
+                <h2><img src="static/images/content_2/teach.svg" alt="teach"><span id="c2_h5"></span></h2>
+            <!--Add here the skills as comment-->
+            </div>
+        </div>
+        <div id="content_3" class="unseen svg_filter"><!--Profile page-->
+            <div id="c3_div1"><!--Generic psychological profile section-->
+                <h2><img src="static/images/content_3/yin-yang.svg" alt="yin-yang"><span id="c3_h1"></span></h2>
+            </div>
+            <div id="c3_div2"><!--Non-technical skills (related to professionalism)-->
+                <h2><img src="static/images/content_3/psi_profession.svg" alt="psi_profession"><span id="c3_h2"></span></h2>
+            </div>
+            <div id="c3_div3"><!--Neuroticism-->
+                <h2><img src="static/images/content_3/psi_neuro.svg" alt="psi_neuro"><span id="c3_h3"></span></h2>
+            </div>
+        </div>
+        <div id="content_4" class="unseen svg_filter"><!--Academics page-->
+            <div id="c4_div1"><!--Long term studies-->
+                <h2><img src="static/images/content_4/many_books.svg" alt="long term"><span id="c4_h1"></span></h2>
+            </div>
+            <div id="c4_div2"><!--Short term studies-->
+                <h2><img src="static/images/content_4/books.svg" alt="short term"><span id="c4_h2"></span></h2>
+            </div>
+            <div id="c4_div3"><!--Professional courses-->
+                <h2><img src="static/images/content_4/scroll.svg" alt="professional courses"><span id="c4_h3"></span></h2>
+            </div>
+            <div id="c4_div4"><!--Other acquired skills-->
+                <h2><img src="static/images/content_4/nerd.svg" alt="other skills"><span id="c4_h4"></span></h2>
+            </div>
+        </div>
+        <div id="content_5" class="unseen svg_filter"><!--Projects page-->
+            <div id="c5_div1"><!--Automotive projects-->
+                <h2><img src="static/images/content_5/automotive.svg" alt="automotive"><span id="c5_h1"></span></h2>
+            </div>
+            <div id="c5_div2"><!--Automation & general electronics projects-->
+                <h2><img src="static/images/content_5/automation.svg" alt="automation"><span id="c5_h2"></span></h2>
+            </div>
+            <div id="c5_div3"><!--Study related projects-->
+                <h2><img src="static/images/content_5/study_book.svg" alt="study"><span id="c5_h3"></span></h2>
+            </div>
+        </div>
+        <div id="content_6" class="unseen svg_filter"><!--Reflections page-->
+            <div id="c6_div1"><!--Revelations-->
+                <h2><img src="static/images/content_6/reflexions.svg" alt="reflexions"><span id="c6_h1"></span></h2>
+            </div>
+            <div id="c6_div2"><!--Findings-->
+                <h2><img src="static/images/content_6/revelation.svg" alt="revelation"><span id="c6_h2"></span></h2>
+            </div>
+            <div id="c6_div3"><!--Poetry-->
+                <h2><img src="static/images/content_6/poetry.svg" alt="poetry"><span id="c6_h3"></span></h2>
+            </div>            
+        </div>   
+
+    </div>
+ 
+    <script src="static/scripts/intro.js" type="module"></script>
+    <script src="static/scripts/text_dict.js"></script>
 </body>
-</html>
