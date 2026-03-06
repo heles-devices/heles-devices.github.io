@@ -36,7 +36,7 @@ contentDivs.forEach(contentItem=>{
     sectionDivs[indOf]=(contentItem.querySelectorAll(`[id^='c${indOf}_div']`));}
 })
 //Function to help generate the content of the 6 pages with details
-let gShake={};
+let gShake={}, randVec=[0,0,0,0,0];
 window.gShake = gShake; // expose globally for debugging
 function generateContent(language){
     //WARNING!! For each cabinet at least one section key is needed (even if redundant) 
@@ -58,7 +58,19 @@ function generateContent(language){
         });
         //populate the gShake dict with the group <g> of SVG elements for animation purposes
         gShake[listKey]=(document.getElementById(`content_${listKey}`)).querySelectorAll("g");
-    }});
+        //filter out all g elements not having the requires attributes
+        gShake[listKey] = Array.from(gShake[listKey]).filter(item => 
+            item.hasAttribute("data-temp") && item.hasAttribute("data-ang")
+        );
+
+        }});
+        //we define 5 random values at a time to control the move of all the g elements
+        //each g element will get one random value from an assigned index
+
+console.log("Page 2 g elements:", gShake[2]?.length);
+console.log("Page 3 g elements:", gShake[3]?.length);
+
+
     requestAnimationFrame(() => checkTallDivs());
 }
 
@@ -362,23 +374,36 @@ function Intro_refresh()
     //calls the draw class function to draw a new char on each column
     for (let ind_an=0;ind_an<cols;ind_an++)chr_series[ind_an].draw(cont);
     //page 2 & 3 animation
-    if([2,3].includes(nav_page)){
-        // Recapture fresh <g> elements from the current page
-        // (in case gShake has stale references from content regeneration)
-        const freshGElements = document.getElementById(`content_${nav_page}`)?.querySelectorAll("g") || [];
-        freshGElements.forEach((elem, idx)=>{
-            const hasTemp = elem.hasAttribute("data-temp");
-            const hasAng = elem.hasAttribute("data-ang");
-            if(hasTemp && hasAng){
-                var tempVal=Number(elem.getAttribute("data-temp"));
-                var angle=Number(elem.getAttribute("data-ang"));
-                tempVal=Math.max(Math.min((tempVal+(Math.random()-0.5)*0.05),1),0);
-                elem.setAttribute("data-temp",tempVal);
-                // include the center of the gauge (256,256) so rotation stays around the middle
-                elem.setAttribute("transform", `rotate(${angle+(tempVal-0.5)*24} 256 256)`);
+    if([2,3].includes(nav_page) && gShake[nav_page]){
+        // Skip frames on page 3 (52 elements) to maintain performance
+        if(!window.__gFrameSkip) window.__gFrameSkip = 0;
+        if(nav_page === 3 && ++window.__gFrameSkip % 2 !== 0) {
+            introRefreshAnim=requestAnimationFrame(Intro_refresh);
+            return;
+        }
+        
+        // Generate 5 random values for this frame
+        for(let i = 0; i < 5; i++){
+            randVec[i] = (Math.random() - 0.5) * 0.05;
+        }
+        
+        // Batch transform updates
+        gShake[nav_page].forEach((elem, idx) => {
+            // Cache angle on first access
+            if(elem.__angle === undefined) {
+                elem.__angle = Number(elem.getAttribute("data-ang"));
+                elem.__tempVal = Number(elem.getAttribute("data-temp"));
+                elem.style.transformOrigin = '256px 256px';
             }
-        })
+            
+            // Update temp value
+            elem.__tempVal = Math.max(Math.min(elem.__tempVal + randVec[idx % 5], 1), 0);
+            
+            // Direct transform manipulation
+            elem.style.transform = `rotate(${elem.__angle + (elem.__tempVal - 0.5) * 24}deg)`;
+        });
     }
+
     introRefreshAnim=requestAnimationFrame(Intro_refresh);
 };
 

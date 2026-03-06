@@ -834,3 +834,6 @@ p:has(.automakers){
     display: inline-block;
     width:150px !important;
 }
+g[data-temp][data-ang] {
+    will-change: transform;
+}
