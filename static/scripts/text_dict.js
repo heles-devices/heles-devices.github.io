@@ -1336,7 +1336,7 @@ const add_txt = {
         "cabinet3":{
             "sec1":{
                 "b1":{
-                    "title":{"ro":"Balada diliului","en":"The Ballad of the Fool","it":"La ballata del pazzo","fr":"La Ballade du Fou"},
+                    "title":"Di-li-ul",
                     "desc":{
                         "ro":"Gânduri negre fumurii,<br>Deznădejdi și lacrimi mii,<br>Mă cuprind cu rândul,<br>Fricile de zi cu zi,<br>Și coșmaruri incă vii,<br>Mă strivesc cu oful.<br><br>Cine-ar mai putea gândi,<br>C-ar mai reuși a scri',<br>Iscusit cuvântul,<br>Când nici stelele luci',<br>Și nici florile rozi',<br>Nu-i mai dau avântul.<br><br>Dinspre dealuri, dinspre vii,<br>Vuiet greu și vijelii,<br>Năpădesc pământul,<br>Nici în munți nici pe câmpii,<br>Nu cutezi să stai, să vii,<br>Nici măcar cu gândul.<br><br>Cerul în culori kaki,<br>Cu străfulgeri vișinii,<br>Prevestesc sfârșitul,<br>Zilele-s deja pustii,<br>Iar speranțele târzi,<br>S-au pierdut cu vântul.<br><br>Dar cu toatele stihii,<br>Și decorul mult prea gri,<br>Ce-mi apasă gândul,<br>Mai cutez în a vă scri',<br>C-am să râd pân-oi muri,<br>De-am să-mi rup veștmântul,<br><br>De toți cei așa dilii,<br>Care cred așa prostii,<br>Și se tem ca focul,<br>Că doar mâine-i altă zi,<br>Și de bine-ar socoti,<br>Și-or schimba norocul.",
                         "en":"Sorry, but translating lyrics from one language to another is... difficult. For now, only the Romanian version is available.",
